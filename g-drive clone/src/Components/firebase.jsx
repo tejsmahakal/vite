@@ -1,4 +1,8 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore';
+import 'firebase/storage';
+import 'firebase/auth';
+
 const firebaseConfig = {
     apiKey: "AIzaSyDEzFF-r7wXlmvPa_Fv6wdzbTkbQ7LBljo",
     authDomain: "gooogle-drive-clone-vite.firebaseapp.com",
@@ -11,7 +15,7 @@ const firebaseConfig = {
 
   const firebaseApp= firebase.initializeApp(firebaseConfig);
 
-  const db = firebaseApp.firestore();
+  const db = firebase.firestore();
   const storage = firebase.storage();
   const auth = firebase.auth();
   const provider = new firebase.auth.GoogleAuthProvider();
