@@ -11,7 +11,7 @@ function App() {
 
 const [user,setUser]=useState(null);
 
-const signIn=()=>{
+const signIn=  ()=>{
   auth.signInWithPopup(provider).then(({user})=>{
     setUser(user)
   }).catch(error=>{
